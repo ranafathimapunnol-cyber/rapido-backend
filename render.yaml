@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: rapido-backend
+    runtime: python
+    repo: https://github.com/ranafathimapunnol-cyber/rapido-backend
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: daphne -b 0.0.0.0 -p $PORT asgi:application
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: rapido-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          name: rapido-redis
+          type: redis
+          property: connectionString
