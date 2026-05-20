@@ -1,0 +1,578 @@
+[
+{
+  "model": "products.category",
+  "pk": 4,
+  "fields": {
+    "name": "MEN",
+    "created_at": "2026-05-16T06:40:42.889Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 5,
+  "fields": {
+    "name": "WOMEN",
+    "created_at": "2026-05-16T06:40:42.892Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 6,
+  "fields": {
+    "name": "KIDS",
+    "created_at": "2026-05-16T06:40:42.894Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 10,
+  "fields": {
+    "name": "Women",
+    "created_at": "2026-05-17T05:55:28.945Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 11,
+  "fields": {
+    "name": "Men",
+    "created_at": "2026-05-17T06:38:33.341Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 12,
+  "fields": {
+    "name": "MENS",
+    "created_at": "2026-05-17T07:06:36.849Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 13,
+  "fields": {
+    "name": "WOMENS",
+    "created_at": "2026-05-17T08:19:44.252Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "name": "Premium Running Shoes",
+    "brand": "Premium",
+    "category": 12,
+    "sub_category": null,
+    "description": "High-performance running shoes with cushioned sole",
+    "price": "2999.00",
+    "stock": 49,
+    "size": "4",
+    "color": "gray",
+    "image": "products/sports1.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-16T06:40:42.896Z",
+    "updated_at": "2026-05-18T08:16:20.156Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "name": "Sports Training Shoes",
+    "brand": "rapido",
+    "category": 12,
+    "sub_category": null,
+    "description": "Perfect for gym and outdoor training",
+    "price": "2499.00",
+    "stock": 40,
+    "size": "UK 8",
+    "color": "pink and black",
+    "image": "products/unisex10.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-16T06:40:42.908Z",
+    "updated_at": "2026-05-17T09:58:39.956Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "name": "Casual Sneakers",
+    "brand": "reebook",
+    "category": 12,
+    "sub_category": null,
+    "description": "Comfortable casual wear for daily use",
+    "price": "1999.00",
+    "stock": 60,
+    "size": "3",
+    "color": "black",
+    "image": "products/sports2.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-16T06:40:42.915Z",
+    "updated_at": "2026-05-17T09:58:46.209Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "name": "Formal Leather Shoes",
+    "brand": "reebook",
+    "category": 12,
+    "sub_category": null,
+    "description": "Elegant formal shoes for office",
+    "price": "3999.00",
+    "stock": 30,
+    "size": "4",
+    "color": "gray",
+    "image": "products/m6.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-16T06:40:42.920Z",
+    "updated_at": "2026-05-17T09:58:54.631Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "name": "Elegant  shoes",
+    "brand": "reebook",
+    "category": 13,
+    "sub_category": null,
+    "description": "Stylish heels for special occasions",
+    "price": "3499.00",
+    "stock": 35,
+    "size": "5",
+    "color": "gray",
+    "image": "products/unisex4.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-16T06:40:42.928Z",
+    "updated_at": "2026-05-17T09:59:00.224Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "name": "Women Sports Shoes",
+    "brand": "R&B",
+    "category": 13,
+    "sub_category": null,
+    "description": "Lightweight sports shoes for women",
+    "price": "2799.00",
+    "stock": 43,
+    "size": "5",
+    "color": "black",
+    "image": "products/unisex3.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-16T06:40:42.933Z",
+    "updated_at": "2026-05-18T08:18:57.693Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "name": "Casual Flats",
+    "brand": "R&B",
+    "category": 13,
+    "sub_category": null,
+    "description": "Comfortable flats for daily wear",
+    "price": "1599.00",
+    "stock": 48,
+    "size": "5",
+    "color": "cream",
+    "image": "products/g3.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-16T06:40:42.940Z",
+    "updated_at": "2026-05-17T09:57:37.676Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "name": "Sneakers",
+    "brand": "PREMIUM",
+    "category": 6,
+    "sub_category": null,
+    "description": "Trendy sneakers for women",
+    "price": "2299.00",
+    "stock": 40,
+    "size": "4",
+    "color": "gray",
+    "image": "products/kids16.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-16T06:40:42.949Z",
+    "updated_at": "2026-05-17T10:00:11.161Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "name": "Kids Running Shoes",
+    "brand": "Premium",
+    "category": 6,
+    "sub_category": null,
+    "description": "Durable running shoes for active kids",
+    "price": "1499.00",
+    "stock": 47,
+    "size": "5",
+    "color": "black",
+    "image": "products/kids13.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-16T06:40:42.961Z",
+    "updated_at": "2026-05-20T03:03:39.070Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "name": "Kids Sports Shoes",
+    "brand": "reebook",
+    "category": 6,
+    "sub_category": null,
+    "description": "Comfortable sports shoes for children",
+    "price": "1299.00",
+    "stock": 56,
+    "size": "7",
+    "color": "black",
+    "image": "products/kids2.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-16T06:40:42.967Z",
+    "updated_at": "2026-05-18T12:28:02.028Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "name": "Kids Casual Shoes",
+    "brand": "Premium",
+    "category": 6,
+    "sub_category": null,
+    "description": "Everyday casual shoes for kids",
+    "price": "999.00",
+    "stock": 63,
+    "size": "5",
+    "color": "cream",
+    "image": "products/kids14.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-16T06:40:42.975Z",
+    "updated_at": "2026-05-18T11:54:57.117Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "name": "Kids School Shoes",
+    "brand": "R&B",
+    "category": 6,
+    "sub_category": null,
+    "description": "Durable school shoes",
+    "price": "1199.00",
+    "stock": 31,
+    "size": "5",
+    "color": "black",
+    "image": "products/kids.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-16T06:40:42.983Z",
+    "updated_at": "2026-05-18T08:07:35.203Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "name": "ballet",
+    "brand": "Premium",
+    "category": 13,
+    "sub_category": null,
+    "description": "PREMIUM new arrival",
+    "price": "16000.00",
+    "stock": 456786,
+    "size": "5",
+    "color": "black",
+    "image": "products/new3.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-17T05:58:53.855Z",
+    "updated_at": "2026-05-18T08:18:57.690Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "name": "ballet",
+    "brand": "Premium",
+    "category": 13,
+    "sub_category": null,
+    "description": "premium",
+    "price": "8900.00",
+    "stock": 4565,
+    "size": "UK 8",
+    "color": "Black",
+    "image": "products/new2.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-17T06:03:40.289Z",
+    "updated_at": "2026-05-17T09:34:37.394Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "name": "max",
+    "brand": "Premium",
+    "category": 12,
+    "sub_category": null,
+    "description": "new",
+    "price": "79999.00",
+    "stock": 45671,
+    "size": "UK 8",
+    "color": "Black",
+    "image": "products/sports3.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-17T06:33:07.237Z",
+    "updated_at": "2026-05-18T05:56:34.400Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 17,
+  "fields": {
+    "name": "reebook",
+    "brand": "Premium",
+    "category": 12,
+    "sub_category": null,
+    "description": "dfghj",
+    "price": "56789.00",
+    "stock": 784,
+    "size": "UK 8",
+    "color": "Black",
+    "image": "products/sports8.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-17T07:06:36.855Z",
+    "updated_at": "2026-05-17T09:41:18.339Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 18,
+  "fields": {
+    "name": "rapid pro",
+    "brand": "Premium",
+    "category": 12,
+    "sub_category": null,
+    "description": "rapido new",
+    "price": "20000.00",
+    "stock": 8,
+    "size": "3",
+    "color": "gray",
+    "image": "products/sports6.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-17T10:01:05.002Z",
+    "updated_at": "2026-05-17T10:02:57.634Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 19,
+  "fields": {
+    "name": "rapid AIR",
+    "brand": "Premium",
+    "category": 12,
+    "sub_category": null,
+    "description": "AERO",
+    "price": "9888.98",
+    "stock": 9990,
+    "size": "4",
+    "color": "black",
+    "image": "products/sports11.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-17T10:01:54.590Z",
+    "updated_at": "2026-05-17T10:01:54.590Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 20,
+  "fields": {
+    "name": "max",
+    "brand": "Premium",
+    "category": 13,
+    "sub_category": null,
+    "description": "HIGH QUALITY",
+    "price": "80000.00",
+    "stock": 6,
+    "size": "UK 8",
+    "color": "white",
+    "image": "products/unisex6.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-17T10:04:06.810Z",
+    "updated_at": "2026-05-18T03:45:22.600Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 21,
+  "fields": {
+    "name": "New balance",
+    "brand": "PREMIUM",
+    "category": 13,
+    "sub_category": null,
+    "description": "RAPIDO AIR",
+    "price": "6600.00",
+    "stock": 19,
+    "size": "UK 4",
+    "color": "white",
+    "image": "products/unisex9.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-17T10:05:09.651Z",
+    "updated_at": "2026-05-17T11:02:41.856Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 22,
+  "fields": {
+    "name": "New balance",
+    "brand": "rapido",
+    "category": 12,
+    "sub_category": null,
+    "description": "COMFY",
+    "price": "72000.00",
+    "stock": 31,
+    "size": "UK 2",
+    "color": "pink and black",
+    "image": "products/m5.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-17T10:07:14.075Z",
+    "updated_at": "2026-05-18T16:03:50.323Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 23,
+  "fields": {
+    "name": "reebook",
+    "brand": "Premium",
+    "category": 12,
+    "sub_category": null,
+    "description": "PREMIUM",
+    "price": "8000.00",
+    "stock": 10,
+    "size": "UK 3",
+    "color": "pink and black",
+    "image": "products/sports5.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-17T10:07:51.532Z",
+    "updated_at": "2026-05-17T10:11:38.756Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 24,
+  "fields": {
+    "name": "rapid pro",
+    "brand": "Premium",
+    "category": 13,
+    "sub_category": null,
+    "description": "BREATHABLE",
+    "price": "9999.00",
+    "stock": 26,
+    "size": "UK 8",
+    "color": "white",
+    "image": "products/m9.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-17T10:08:27.503Z",
+    "updated_at": "2026-05-18T08:18:57.697Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 25,
+  "fields": {
+    "name": "boldfit",
+    "brand": "Premium",
+    "category": 12,
+    "sub_category": null,
+    "description": "BREATHABLE",
+    "price": "3000.00",
+    "stock": 2,
+    "size": "5",
+    "color": "black",
+    "image": "products/sports7.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-17T10:10:38.830Z",
+    "updated_at": "2026-05-18T08:52:10.002Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 26,
+  "fields": {
+    "name": "reebook",
+    "brand": "Premium",
+    "category": 13,
+    "sub_category": null,
+    "description": "premium",
+    "price": "9999.00",
+    "stock": 28,
+    "size": "UK 8",
+    "color": "gray",
+    "image": "products/unisex2.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-17T11:05:10.466Z",
+    "updated_at": "2026-05-18T12:32:56.471Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 27,
+  "fields": {
+    "name": "reebook",
+    "brand": "Premium",
+    "category": 13,
+    "sub_category": null,
+    "description": "good",
+    "price": "9900.00",
+    "stock": 34,
+    "size": "UK 8",
+    "color": "Black",
+    "image": "products/unisex12.jpg",
+    "is_featured": false,
+    "gender": "UNISEX",
+    "created_at": "2026-05-18T04:49:16.151Z",
+    "updated_at": "2026-05-18T12:28:02.033Z"
+  }
+}
+]

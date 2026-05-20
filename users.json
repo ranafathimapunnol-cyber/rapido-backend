@@ -1,0 +1,67 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$LPul8HJUAvD5NM0U5QJfDz$26/V0eDONzhbvB9zoeVY3yC/d5RaHhJ48sRQyQNmHDA=",
+    "last_login": "2026-05-19T14:21:52.753Z",
+    "is_superuser": true,
+    "username": "admin2",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-05-19T14:19:55.574Z",
+    "email": "admin2@gmail.com",
+    "phone": null,
+    "profile_picture": "",
+    "address": null,
+    "city": null,
+    "state": null,
+    "pincode": null,
+    "bio": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$0CbKnIqdEx7CZNGzZYlSnp$q23Gi7he7v75YiHvb2t/J1MxWACRZuMUxqsJo3Ptusc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "rana",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-20T03:00:11.730Z",
+    "email": "ranap@gmail.com",
+    "phone": null,
+    "profile_picture": "profile_pics/__3_9vlnwh7.jpeg",
+    "address": null,
+    "city": null,
+    "state": null,
+    "pincode": null,
+    "bio": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.useraddress",
+  "pk": 1,
+  "fields": {
+    "user": 5,
+    "full_name": "rana fathima",
+    "phone": "09496545454",
+    "address": "punnolil ho , thuvvakkunnu post ,kolavelloore",
+    "city": "kannur",
+    "state": "kerala",
+    "pincode": "670693",
+    "is_default": true,
+    "created_at": "2026-05-20T03:03:19.267Z"
+  }
+}
+]
