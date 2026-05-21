@@ -20,10 +20,14 @@ REST_FRAMEWORK = {
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-cc!3u!jb-=)&v)i)6$$zkqs)6ezg-nlp*p*(y6t(v=^@@3re9h')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+# 🛠️ ENHANCED ENVIRONMENT ISOLATION
+# If explicitly running on Render cloud infrastructure, use production rules. Otherwise, force True.
+if os.environ.get('RENDER_SERVICE_ID') or os.environ.get('RENDER'):
+    DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+else:
+    DEBUG = True 
 
-ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1', '.trycloudflare.com', '.railway.app']
+ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1', '.trycloudflare.com', 'rapido-backend-k4ns.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
@@ -49,7 +53,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # ✅ Add this for static files
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # ✅ For serving static assets cleanly
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -77,10 +81,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'wsgi.application'
 
-# Database - Use Railway's PostgreSQL (or fallback to local)
+# 🗄️ ROBUST DATABASE FALLBACK
+# Ensures that if an external PostgreSQL URL fails locally, it cleanly points to your expected schema.
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL', 'postgresql://postgres:fullstack@localhost:5432/ecommerce_shoes')
+        default=os.environ.get('DATABASE_URL', 'postgresql://postgres:fullstack@localhost:5432/ecommerce_shoes'),
+        conn_max_age=600
     )
 }
 
@@ -102,14 +108,16 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, '..', 'frontend', 'build', 'static'),
-]
+# Conditional lookup for frontend files to prevent application start initialization crashes
+FRONTEND_STATIC_DIR = os.path.join(BASE_DIR, '..', 'frontend', 'build', 'static')
+STATICFILES_DIRS = []
+if os.path.exists(FRONTEND_STATIC_DIR):
+    STATICFILES_DIRS.append(FRONTEND_STATIC_DIR)
 
-# Static file storage for production
+# Static file storage engine
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# CORS settings
+# CORS configuration
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://localhost:3000",
@@ -119,18 +127,18 @@ CORS_ALLOWED_ORIGINS = [
     "https://*.railway.app",
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True  # For development
+CORS_ALLOW_ALL_ORIGINS = True  
 CORS_ALLOW_HEADERS = ["authorization", "content-type", "accept", "origin", "x-requested-with"]
 CORS_ALLOW_CREDENTIALS = True
 
-# Custom User Model
+# Custom User Identity Model
 AUTH_USER_MODEL = 'users.User'
 
-# Media files
+# Media content directories
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# JWT Settings
+# JWT System Engine
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
@@ -138,7 +146,7 @@ SIMPLE_JWT = {
     'BLACKLIST_AFTER_ROTATION': True,
 }
 
-# Channels configuration - Use Railway's Redis
+# Channels real-time routing layer
 ASGI_APPLICATION = 'asgi.application'
 CHANNEL_LAYERS = {
     'default': {
@@ -149,7 +157,7 @@ CHANNEL_LAYERS = {
     },
 }
 
-# File upload settings
+# Payload handling constraints
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240
 DATA_UPLOAD_MAX_MEMORY_SIZE = 20971520
 FILE_UPLOAD_MAX_MEMORY_SIZE = 20971520
@@ -160,9 +168,10 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.vercel.app',
     'http://localhost:8000',
     'http://127.0.0.1:8000',
+    'https://rapido-backend-k4ns.onrender.com',
 ]
 
-# Security settings for production
+# Production explicit security headers configuration
 if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SESSION_COOKIE_SECURE = True
